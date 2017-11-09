@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>b22c43b3-8288-4fac-b54c-56268af9b7d2</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>ejercicio.py</StartupFile>
+    <StartupFile>pag29Ejercicio2.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -35,6 +35,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Ejercicio4pag17.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="pag29Ejercicio2.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
