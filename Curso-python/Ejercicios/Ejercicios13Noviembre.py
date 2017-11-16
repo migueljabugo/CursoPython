@@ -68,6 +68,7 @@ def elementosEnComun(lista1, lista2):
 					result.append(elementoLista1)
 	return result
 
+
 #Ejercicio 5
 '''Crea una funcion que simule el juego Piedra, Papel y Tijeras. Debe preguntar 
 (usando input) la eleccion de los 2 jugadores y devolver un mensaje que diga 
@@ -133,18 +134,11 @@ def primerUltimoElemento(lista):
 	result.append(lista.pop(len(lista)-1))
 	return result
 
+
 #Ejercicio 8
 '''Crea una función que dada una frase (con mas de dos palabras) devuelva 
 otra frase con las palabras en orden inverso
 '''
-def reordenaFrase(frase):
-	palabras = frase.split(' ')
-	nueva_frase = ""
-	while (len(palabras)>1):
-	    nueva_frase += palabras.pop(random.randint(0, len(palabras)-1))+" "
-	return nueva_frase
-
-
 def invierteFrase(frase):
 	nueva_frase = ""
 	palabras = frase.split(' ')
@@ -170,14 +164,101 @@ de veces que aparece cada caracter
 '''
 def repeticionDeCaracteres(frase):
 	diccionario = {}
-	caracteres = list(frase)
-	'''for caracter in caracteres:
-	    if diccionario.get:
-			print('a')
+	for caracter in frase:
+		if (caracter in diccionario):
+			diccionario[caracter]+=1
 		else:
-			print('b')'''
+			diccionario[caracter]=1
+	return diccionario
 
 
+#Ejercicio 11
+'''Crea una funcion que dada una secuencia de números devuelva la suma de 
+todos los elementos
+'''
+def sumaElementos(lista):
+	sum=0
+	for i in lista:
+		sum+=i
+	return sum
+
+
+#Ejercicio 12
+'''Crea una funcion que dada una secuencia de numeros devuelva la multiplicacion 
+de todos los elementos
+'''
+def multiplicaElementos(lista):
+	sum=1
+	for i in lista:
+		sum*=i
+	return sum
+
+
+#Ejercicio 13
+'''Crea una funcion que dada una secuencia de numeros devuelva el mayor de todos 
+los elementos
+'''
+def mayor(lista):
+	return max(lista)
+
+
+#Ejercicio 14
+'''Crea una funcion que dada una secuencia de numeros devuelva el menor de todos 
+los elementos
+'''
+def menor(lista):
+	return min(lista)
+
+
+#Ejercicio 15
+'''Crea una funcion que dada una lista de numeros devuelva una lista con los numeros 
+ordenados de menor a mayor
+'''
+def ordena(lista):
+	return sorted(lista)
+
+
+#Ejercicio 16
+'''Crea una funcion que dada una lista devuelva una copia de la misma desordenada 
+aleatoriamente
+'''
+def desordena(lista):
+	new_lista = []
+	while (len(lista)>1):
+	    new_lista.append(lista.pop(random.randint(0, len(lista)-1)))
+	return new_lista
+
+
+#Ejercicio 17
+'''Crea una funcion que dado un diccionario devuelva un diccionario con las claves 
+ordenadas de menor a mayor
+'''
+def ordenaDiccionario(diccionario):
+	return sorted(diccionario)
+
+
+#Ejercicio 18
+'''Crea una funcion que dados 3 diccionarios devuelva diccionario unificado(no debe 
+haber clavesrepetidas entre los diccionarios de entrada
+'''
+def unificaDiccionarios(dic1, dic2, dic3):
+	dic1.update(dic2)
+	dic1.update(dic3)
+	return dic1
+
+
+#Ejercicio 19
+'''Crea una funcion que dado un numero n genere un diccionario de 1 a n(inclusive) 
+donde cada clave sea x (siendo x cada numero de 1 a n) y el valor x^2.
+Ejemplo:
+Entrada ->(n=5)
+Salida ->{1:1, 2:4, 3:9, 4:16, 5:25}
+'''
+def generaDiccionario(num):
+	result = {}
+	for x in range(1, int(num)+1):
+		result[x]=x*x
+	return result
 
 
 #Ejercicio 20
